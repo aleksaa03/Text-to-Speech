@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main h1,
+.main textarea,
+.main button {
+  margin: 10px 0;
+}
+.main textarea {
+  height: 200px;
+  width: 500px;
+  padding: 5px;
+  border: 1px solid #ebe9ed;
+  resize: none;
+  outline: none;
+  transition: 0.25s;
+}
+.main textarea:focus {
+  border: 1px solid #2ecc71;
+}
+.main button {
+  height: 40px;
+  width: 100px;
+  background: #2ecc71;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+  .main textarea {
+    width: 90%;
+  }
+}
