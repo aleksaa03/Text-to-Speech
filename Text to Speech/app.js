@@ -1,11 +1,32 @@
 var inputText = document.getElementById("text");
 
-if ("speechSynthesis" in window) {
-  function textToSpeech() {
-    var speech = new SpeechSynthesisUtterance();
-    var speechOptions = window.speechSynthesis;
-    speech.text = inputText.value;
-    speechOptions.speak(speech);
+var pitch = document.getElementById("pitch");
+var rate = document.getElementById("rate");
+var volume = document.getElementById("volume");
+
+var speech = new SpeechSynthesisUtterance();
+var speechOptions = window.speechSynthesis;
+
+function textToSpeech() {
+  speech.text = inputText.value;
+  speechOptions.speak(speech);
+}
+
+function options(e, number) {
+  var targetValue = e.target.value;
+  switch (number) {
+    case 0:
+      speech.pitch = targetValue;
+      pitch.innerHTML = targetValue;
+      break;
+    case 1:
+      speech.rate = targetValue;
+      rate.innerHTML = targetValue;
+      break;
+    case 2:
+      speech.volume = targetValue;
+      volume.innerHTML = Math.floor(targetValue * 100) + "%";
+      break;
   }
 }
 

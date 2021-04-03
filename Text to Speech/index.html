@@ -14,8 +14,48 @@
   <body>
     <div class="main" id="main">
       <h1>Text to Speech</h1>
-      <textarea name="" id="text" cols="30" rows="10"></textarea>
+      <textarea name="" id="text" cols="30" rows="10" placeholder="Enter a text"></textarea>
       <button onclick="textToSpeech()">Speak</button>
+    </div>
+    <h1 id="options">Options</h1>
+    <div class="options">
+      <div class="pitch">
+        <h3>Pitch</h3>
+        <div class="pitch-options">
+          <input type="range" name="" id="" max="2" value="1" oninput="options(event, 0)" />
+          <h3 id="pitch">1</h3>
+        </div>
+      </div>
+      <div class="rate">
+        <h3>Rate</h3>
+        <div class="rate-options">
+          <input
+            type="range"
+            name=""
+            id=""
+            step="0.1"
+            max="10"
+            value="1"
+            oninput="options(event, 1)"
+          />
+          <h3 id="rate">1</h3>
+        </div>
+      </div>
+      <div class="volume">
+        <h3>Volume</h3>
+        <div class="volume-options">
+          <input
+            type="range"
+            name=""
+            id=""
+            step="0.01"
+            max="1"
+            value="1"
+            oninput="options(event, 2)"
+          />
+          <h3 id="volume">100%</h3>
+        </div>
+      </div>
     </div>
     <script src="app.js"></script>
     <script src="src/index.js"></script>

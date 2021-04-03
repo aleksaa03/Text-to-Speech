@@ -2,17 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  padding-top: 5%;
 }
 .main h1,
 .main textarea,
@@ -23,13 +20,14 @@
   height: 200px;
   width: 500px;
   padding: 5px;
-  border: 1px solid #ebe9ed;
+  font-size: 20px;
+  border: 1.5px solid #ebe9ed;
   resize: none;
   outline: none;
   transition: 0.25s;
 }
 .main textarea:focus {
-  border: 1px solid #2ecc71;
+  border: 1.5px solid #2ecc71;
 }
 .main button {
   height: 40px;
@@ -39,10 +37,47 @@
   border: none;
   border-radius: 10px;
   outline: none;
+  transition: 0.25s;
   cursor: pointer;
+}
+.main button:hover {
+  background: #27ae60;
+}
+#options {
+  text-align: center;
+  margin: 10px 0;
+}
+.options {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.options .pitch .pitch-options,
+.options .rate .rate-options,
+.options .volume .volume-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.options .pitch .pitch-options h3,
+.options .rate .rate-options h3,
+.options .volume .volume-options h3 {
+  position: absolute;
+  left: 100%;
+  margin: 0 10px;
 }
 @media only screen and (max-width: 768px) {
   .main textarea {
     width: 90%;
+  }
+  .options {
+    flex-direction: column;
+  }
+  .options .pitch,
+  .options .rate,
+  .options .volume {
+    margin: 20px 0;
   }
 }
