@@ -9,6 +9,7 @@ var speechOptions = window.speechSynthesis;
 
 function textToSpeech() {
   speech.text = inputText.value;
+  speech.voice = speechOptions.getVoices()[0];
   speechOptions.speak(speech);
 }
 
