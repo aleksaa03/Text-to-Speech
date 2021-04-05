@@ -1,3 +1,7 @@
+:root {
+  --color: #2ecc71;
+  --hover-color: #27ae60;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,6 +17,7 @@
 }
 .main h1,
 .main textarea,
+.main p,
 .main button {
   margin: 10px 0;
 }
@@ -26,32 +31,32 @@
   outline: none;
   transition: 0.25s;
 }
-.main textarea:focus {
-  border: 1.5px solid #2ecc71;
+.main .option-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.main button {
+.main .option-buttons button {
   height: 40px;
   width: 100px;
-  background: #2ecc71;
+  background: var(--color);
   color: #ffffff;
+  margin: 0 10px;
   border: none;
   border-radius: 10px;
   outline: none;
   transition: 0.25s;
   cursor: pointer;
 }
-.main button:hover {
-  background: #27ae60;
-}
-#options {
-  text-align: center;
-  margin: 10px 0;
+.main .option-buttons button:hover {
+  background: var(--hover-color);
 }
 .options {
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  margin: 10px 0;
 }
 .options .pitch .pitch-options,
 .options .rate .rate-options,
@@ -92,7 +97,7 @@
   height: 15px;
   width: 15px;
   border-radius: 24px;
-  background: #2ecc71;
+  background: var(--color);
   margin-top: 0.5px;
 }
 @media only screen and (max-width: 768px) {

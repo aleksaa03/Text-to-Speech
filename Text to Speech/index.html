@@ -15,9 +15,11 @@
     <div class="main" id="main">
       <h1>Text to Speech</h1>
       <textarea name="" id="text" cols="30" rows="10" placeholder="Enter a text..."></textarea>
-      <button onclick="textToSpeech()">Speak</button>
+      <div class="option-buttons">
+        <button class="button" onclick="textToSpeech()">Speak</button>
+        <button class="button" onclick="recognizeVoice()">Recognize</button>
+      </div>
     </div>
-    <h1 id="options">Options</h1>
     <div class="options">
       <div class="pitch">
         <h3>Pitch</h3>
